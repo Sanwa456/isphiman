@@ -1,0 +1,40 @@
+body {
+    background-image: url('images/vvg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.characters {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.character {
+    width: 500px; /* ปรับขนาดแต่ไว้ก่อนทำยาก */
+}
+.button {
+    padding: 15px 100px;
+    font-size: 40px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #005f73;
+}

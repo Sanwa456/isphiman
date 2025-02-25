@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>หน้าควบคุมระบบ</h2>
+
+        <!-- ส่วนเพิ่มผู้ใช้ -->
+        <div class="add-user">
+            <h3>เพิ่มผู้ใช้ใหม่</h3>
+            <form id="addUserForm">
+                <label for="userClass">เลือกชั้นเรียน:</label>
+                <select id="userClass" required>
+                    <option value="">-- เลือกชั้นเรียน --</option>
+                    <option value="ม.1">ม.1</option>
+                    <option value="ม.2">ม.2</option>
+                    <option value="ม.3">ม.3</option>
+                    <option value="ม.4">ม.4</option>
+                    <option value="ม.5">ม.5</option>
+                    <option value="ม.6">ม.6</option>
+                </select>
+
+                <input type="text" id="newUsername" placeholder="ชื่อผู้ใช้ใหม่" required />
+                <input type="password" id="newPassword" placeholder="รหัสผ่านใหม่" required />
+                <button type="submit">เพิ่มผู้ใช้</button>
+            </form>
+            <p id="message"></p>
+        </div>
+
+        <!-- ปุ่มเลือกดูรายชื่อผู้ใช้ตามระดับชั้น -->
+        <div class="filter-class">
+            <h3>เลือกดูรายชื่อผู้ใช้ตามระดับชั้น</h3>
+            <select id="filterClass">
+                <option value="all">แสดงทั้งหมด</option>
+                <option value="ม.1">ม.1</option>
+                <option value="ม.2">ม.2</option>
+                <option value="ม.3">ม.3</option>
+                <option value="ม.4">ม.4</option>
+                <option value="ม.5">ม.5</option>
+                <option value="ม.6">ม.6</option>
+            </select>
+        </div>
+
+        <!-- รายชื่อผู้ใช้ -->
+        <div class="user-list">
+            <h3>รายชื่อผู้ใช้</h3>
+            <ul id="userList"></ul>
+        </div>
+
+        <!-- ปุ่มออกจากระบบ -->
+        <button id="logoutBtn">ออกจากระบบ</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
